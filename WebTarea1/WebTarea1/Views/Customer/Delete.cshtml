@@ -1,0 +1,114 @@
+﻿@model WebTarea1.Model.Customer
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Customer</h4>
+    <hr />
+    
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.CustomerID)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.CustomerID)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.CompanyName)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.CompanyName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactName)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.ContactName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactTitle)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.ContactTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.Address)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.City)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Region)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.Region)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PostalCode)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.PostalCode)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Country)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.Country)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.Phone)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Fax)
+            </dt>
+
+            <dd>
+                @Html.TextBoxFor(model => model.Fax)
+            </dd>
+
+        </dl>
+
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
